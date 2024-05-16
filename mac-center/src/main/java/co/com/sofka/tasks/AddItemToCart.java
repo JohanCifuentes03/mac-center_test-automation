@@ -35,5 +35,4 @@ public class AddItemToCart implements Task {
     public static AddItemToCart addItemToCart() {
         return new AddItemToCart();
     }
-
 }

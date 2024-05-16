@@ -1,6 +1,7 @@
 package co.com.sofka.utils;
 
 import co.com.sofka.models.CartFormModel;
+import co.com.sofka.models.DebitCardModel;
 import net.datafaker.Faker;
 
 public class CreateModel {
@@ -16,4 +17,11 @@ public class CreateModel {
                 ("31" + faker.bothify("########"))
         );
     }
+    public static DebitCardModel createDebitCardNumber(){
+        return new DebitCardModel(
+                ("4" +  faker.bothify("###############")),
+                faker.bothify("###")
+        );
+    }
+
 }

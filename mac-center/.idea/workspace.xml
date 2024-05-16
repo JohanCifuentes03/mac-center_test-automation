@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="" />
+    <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/DebitCardModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ContinueToPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ConfirmCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ConfirmCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/FormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,25 +82,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Gradle.DemoScreenPlay [aggregate].executor": "Run",
-    "Gradle.mac-center [checkOutcomes].executor": "Run",
-    "Gradle.mac-center [clearHistory].executor": "Run",
-    "Gradle.mac-center [clearReports].executor": "Run",
-    "Gradle.mac-center [history].executor": "Run",
-    "JUnit.BuyItemsTest.executor": "Run",
-    "JUnit.RunnerCarrito.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Johan Cifuentes/Desktop/JAVA/mac-center/mac-center_test-automation/mac-center/build.gradle",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DemoScreenPlay [aggregate].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [checkOutcomes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [clearHistory].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [clearReports].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [history].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BuyItemsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunnerCarrito.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;johan.cifuentes&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Johan Cifuentes/Desktop/JAVA/mac-center_test-automation/mac-center/build.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Johan Cifuentes\Desktop\JAVA\mac-center\mac-center" />
