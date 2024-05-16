@@ -7,6 +7,7 @@ import co.com.sofka.models.DebitCardModel;
 import co.com.sofka.questions.CardNumber;
 import co.com.sofka.tasks.*;
 import co.com.sofka.utils.CreateModel;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -34,6 +35,10 @@ public class BuyItemsSD extends WebSetup {
                 SearchItem.searchItem().withName(itemName),
                 AddItemToCart.addItemToCart()
         ));
+    }
+
+    @And("goes to the cart")
+    public void goesToTheCart() {
         actor.attemptsTo(
                 OpenCart.openCart(),
                 ConfirmCart.confirmCart()
@@ -58,13 +63,12 @@ public class BuyItemsSD extends WebSetup {
 
         actor.should(
                 seeThat(paymentButtonEnabled(), is(true)),
-
                 seeThat(CardNumber.allDigits(),
                         containsString(debitCardModel.getNumber().substring(0, 4))),
-
                 seeThat(CardNumber.allDigits(),
                         containsString(debitCardModel.getNumber().substring(last - 3 )))
         );
     }
+
 
 }

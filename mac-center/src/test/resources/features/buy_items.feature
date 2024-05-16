@@ -10,9 +10,10 @@ Feature: Purchase items on mac-center.com
       | Iphone 13       |
       | Macbook pro     |
       | Airpods         |
+    And goes to the cart
     And confirms their credentials using bbva payment method
     Then should receive a confirmation message indicating a successful purchase
     Examples:
       | webBrowser |
-      #| chrome     |
+      | chrome     |
       | edge       |

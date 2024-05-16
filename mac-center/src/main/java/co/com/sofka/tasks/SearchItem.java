@@ -15,7 +15,6 @@ import java.time.Duration;
 
 public class SearchItem implements Task {
     private String itemName;
-
     public SearchItem withName (String itemName){
         this.itemName = itemName;
         return this;
@@ -30,6 +29,7 @@ public class SearchItem implements Task {
                         WebElementStateMatchers.isVisible()).forNoMoreThan(Duration.ofSeconds(10))
         );
     }
+
 
     public static SearchItem searchItem(){
         return new SearchItem();

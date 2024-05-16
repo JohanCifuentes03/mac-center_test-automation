@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/CardNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/PayButtonEnabled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/SelectBbvaOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/SearchItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/SearchItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/d0831f7012b860f9c8752f25be7d138afac24ce17c513c25ffd389b750202eee.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
