@@ -10,7 +10,7 @@ public class CreateModel {
     public static CartFormModel createCartFormModel(){
         return new CartFormModel(
                 faker.internet().emailAddress(),
-                faker.bothify("###########"),
+                ("1" + faker.bothify("##########")),
                 faker.name().firstName(),
                 faker.name().lastName(),
                 faker.address().fullAddress(),
@@ -20,7 +20,7 @@ public class CreateModel {
     public static DebitCardModel createDebitCardNumber(){
         return new DebitCardModel(
                 ("4" +  faker.bothify("###############")),
-                faker.bothify("###")
+                ("1" + faker.bothify("##"))
         );
     }
 

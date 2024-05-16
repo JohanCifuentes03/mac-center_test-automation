@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/DebitCardModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ContinueToPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/CardNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/PayButtonEnabled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/SelectBbvaOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/AddItemToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ConfirmCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/ConfirmCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutBBVAForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/FormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" afterDir="false" />

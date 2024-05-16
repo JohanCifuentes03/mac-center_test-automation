@@ -19,7 +19,7 @@ public class AddItemToCart implements Task {
         SearchItemsPage searchItemsPage = new SearchItemsPage();
         List<WebElementFacade> productButtons = searchItemsPage.getListOfProductButtons();
 
-        int sublistSize = productButtons.size() / 4;
+        int sublistSize = productButtons.size() / 4; // selects the first 25% of the results
         List<WebElementFacade> elements = productButtons.subList(0, sublistSize);
 
         Random random = new Random();

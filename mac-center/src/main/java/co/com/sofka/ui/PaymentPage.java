@@ -5,6 +5,7 @@ import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 
 public class PaymentPage extends PageObject {
+
     public static Target CONTINUE_PAYMENT_BTN = Target
             .the("continue payment button")
             .located(By.xpath("//button/span[contains(text(), 'método de pago')]/ancestor::button"));
@@ -23,15 +24,39 @@ public class PaymentPage extends PageObject {
 
     public static Target CARD_MONTH_BOX = Target
             .the("the card month box")
-            .located(By.xpath("//input[@id = 'cardMonth']"));
+            .located(By.xpath("//select[@id = 'cardMonth']"));
 
     public static Target CARD_YEAR_BOX = Target
             .the("the card year box")
-            .located(By.xpath("//input[@id = 'cardYear']"));
+            .located(By.xpath("//select[@id = 'cardYear']"));
+
+    public static Target CCV_NUMBER_INPUT = Target
+            .the("the CCV input")
+            .located(By.xpath("//input[@id = 'cardCvv']"));
 
     public static Target CARD_INSTALLMENT = Target
             .the("the card installment box")
-            .located(By.xpath("//input[@id = 'installmentsSelect']"));
+            .located(By.xpath("//select[@id = 'installmentsSelect']"));
 
+    public static Target ID_TYPE_BOX = Target
+            .the("the id type box")
+            .located(By.xpath("//select[@class = 'card-input__input -select full_wide']"));
+
+    public static Target DOC_NUMBER_FIELD = Target
+            .the("the id type options")
+            .located(By.xpath("//input[@id = 'docNumber']"));
+
+    public static Target TERMS_CONDITIONS_CHECK_BOX = Target
+            .the("the terms and conditions check box")
+            .located(By.xpath("(//input[@class = 'input-checkbox'])[1]"));
+
+    public static Target PAY_BUTTON = Target
+            .the("the terms and conditions check box")
+            .located(By.xpath("//button[@class = 'card-form__button']"));
+
+
+    public static Target CARD_DIGITS = Target
+            .the("the card digits in image")
+            .located(By.xpath("//div[@class='card-item__numberItem']"));
 
 }

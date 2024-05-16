@@ -10,7 +10,6 @@ Feature: Purchase items on mac-center.com
       | Iphone 13       |
       | Macbook pro     |
       | Airpods         |
-      | cargador iphone |
     And confirms their credentials using bbva payment method
     Then should receive a confirmation message indicating a successful purchase
     Examples:
