@@ -25,5 +25,4 @@ public class CreateModel {
                 ("1" + faker.bothify("##"))
         );
     }
-
 }

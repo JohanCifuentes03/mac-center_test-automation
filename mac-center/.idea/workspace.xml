@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/FillOutEfectyForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/SelectEfectyOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/MarvelConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/MarvelConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Comic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Comic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/PaymentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/CreateModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/runners/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/runners/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/web/BuyItemsSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/register.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/register.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/search_single_comic.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/search_single_comic.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,29 +79,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DemoScreenPlay [aggregate].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mac-center [checkOutcomes].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mac-center [clearHistory].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mac-center [clearReports].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mac-center [history].executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BuyItemsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GeneralTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunnerCarrito.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WebTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;johan.cifuentes&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Johan Cifuentes/Desktop/JAVA/mac-center_test-automation/mac-center/src/test/resources/features&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Cucumber Java.Scenario: Successfully purchase items.executor": "Run",
+    "Gradle.DemoScreenPlay [aggregate].executor": "Run",
+    "Gradle.mac-center [checkOutcomes].executor": "Run",
+    "Gradle.mac-center [clearHistory].executor": "Run",
+    "Gradle.mac-center [clearReports].executor": "Run",
+    "Gradle.mac-center [history].executor": "Run",
+    "JUnit.ApiTest.executor": "Run",
+    "JUnit.BuyItemsTest.executor": "Run",
+    "JUnit.GeneralTest.executor": "Run",
+    "JUnit.RunnerCarrito.executor": "Run",
+    "JUnit.WebTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "johan.cifuentes",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Johan Cifuentes/Desktop/JAVA/mac-center_test-automation/mac-center/src/test/resources/features",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Johan Cifuentes\Desktop\JAVA\mac-center_test-automation\mac-center\src\test\resources\features" />
@@ -102,14 +112,27 @@
       <recent name="co.com.sofka.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GeneralTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="co.com.sofka.Main" />
-      <module name="DemoScreenPlay.main" />
+  <component name="RunManager" selected="JUnit.WebTest">
+    <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="ARGS_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Successfully purchase items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" />
+      <option name="GLUE" value="co.com.sofka.stepdefinitions.web net.serenitybdd.cucumber.actors" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DemoScreenPlay.test" />
+      <option name="NAME_FILTER" value="^Successfully purchase items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Successfully purchase items$&quot;" />
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="SUGGESTED_NAME" value="Scenario: Successfully purchase items" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="co.com.sofka.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,8 +140,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="ARGS_FILE" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebTest" />
+        <item itemvalue="Cucumber Java.Scenario: Successfully purchase items" />
         <item itemvalue="JUnit.GeneralTest" />
         <item itemvalue="Gradle.DemoScreenPlay [aggregate]" />
         <item itemvalue="JUnit.ApiTest" />
-        <item itemvalue="JUnit.WebTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

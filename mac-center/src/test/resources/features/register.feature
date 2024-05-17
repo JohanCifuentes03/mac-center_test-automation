@@ -3,7 +3,6 @@ Feature: Register account on mac-center.com
   I want to register an account
   So that I can be notified for promotions
 
-
   @web
   Scenario Outline: Successfully register an account
     Given the user is on the mac-center.com platform using "<webBrowser>"

@@ -3,7 +3,6 @@ Feature: Search single comic using GET service
   I want to search for information about a comic
   So that I can view its details and enjoy the content
 
-
   @service
   Scenario Outline: Search single comic
     Given the user is connected to the Marvel Developer API

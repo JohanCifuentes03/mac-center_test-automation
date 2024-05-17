@@ -7,8 +7,6 @@ public class Comic {
     private String id;
     private String title;
 
-
-
     public String getId() {
         return id;
     }

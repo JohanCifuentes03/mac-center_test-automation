@@ -12,7 +12,23 @@ public class PaymentPage extends PageObject {
 
     public static Target BBVA_PAYMENT_OPTION = Target
             .the("continue BBVA payment option")
-            .located(By.xpath("//span[contains(text(), 'BBVA')]/ancestor::div[contains(@class, 'row')]"));
+            .located(By.xpath("//span[contains(text(), 'Pago tarjetas')]/ancestor::div[contains(@class, 'row')]"));
+
+    public static Target EFECTY_PAYMENT_OPTION = Target
+            .the("continue efecty payment option")
+            .located(By.xpath("//span[contains(text(), 'Efecty')]/ancestor::div[contains(@class, 'row')]"));
+
+    public static Target EFECTY_PAYMENT_BOX = Target
+            .the("the efecty payment box")
+            .located(By.xpath("//select[@id = 'offline_payment_method']"));
+
+    public static Target EFECTY_DOCUMENT_BOX = Target
+            .the("the efecty document box")
+            .located(By.xpath("//select[@id = 'offline_payment_company']"));
+
+    public static Target EFECTY_DOCUMENT_NUMBER = Target
+            .the("the document input")
+            .located(By.xpath("//input[@id = 'offline_payment_number']"));
 
     public static Target CARD_NUMBER_INPUT = Target
             .the("the card number input")
@@ -53,7 +69,6 @@ public class PaymentPage extends PageObject {
     public static Target PAY_BUTTON = Target
             .the("the terms and conditions check box")
             .located(By.xpath("//button[@class = 'card-form__button']"));
-
 
     public static Target CARD_DIGITS = Target
             .the("the card digits in image")

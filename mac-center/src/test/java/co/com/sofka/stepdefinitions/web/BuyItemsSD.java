@@ -49,7 +49,6 @@ public class BuyItemsSD extends WebSetup {
 
     @When("confirms their credentials using bbva payment method")
     public void confirmsTheirCredentialsUsingBbvaPaymentMethod() {
-
         actor.attemptsTo(
                 FillOutForm.fillOutForm().withTheUser(userFormModel),
                 ContinueToPayment.continueToPayment(),
@@ -58,12 +57,21 @@ public class BuyItemsSD extends WebSetup {
         );
     }
 
-    @Then("should receive a confirmation message indicating a successful purchase")
-    public void shouldReceiveAConfirmationMessageIndicatingASuccessfulPurchase() {
-        int last = debitCardModel.getNumber().length() - 1;
+    @And("confirms their credentials using efecty payment method")
+    public void confirmsTheirCredentialsUsingEfectyPaymentMethod() {
+        actor.attemptsTo(
+                FillOutForm.fillOutForm().withTheUser(userFormModel),
+                ContinueToPayment.continueToPayment(),
+                SelectEfectyOption.selectEfectyOption(),
+                FillOutEfectyForm.fillOutEfectyForm().withTheUser(userFormModel)
+        );
+    }
 
+
+    @Then("should see its information in the card")
+    public void shouldSeeItsInformationInTheCard() {
+        int last = debitCardModel.getNumber().length() - 1;
         actor.should(
-                seeThat(paymentButtonEnabled(), is(true)),
                 seeThat(CardNumber.allDigits(),
                         containsString(debitCardModel.getNumber().substring(0, 4))),
                 seeThat(CardNumber.allDigits(),
@@ -71,5 +79,10 @@ public class BuyItemsSD extends WebSetup {
         );
     }
 
-
+    @Then("should be able to confirm the payment")
+    public void shouldBeAbleToConfirmThePayment() {
+        actor.should(
+                seeThat(paymentButtonEnabled(), is(true))
+        );
+    }
 }
