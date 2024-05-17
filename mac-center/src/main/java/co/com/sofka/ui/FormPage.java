@@ -1,12 +1,10 @@
 package co.com.sofka.ui;
 
-import lombok.Getter;
 import net.serenitybdd.screenplay.targets.Target;
-import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
+import net.serenitybdd.core.pages.PageObject;
 
 
-@Getter
 public class FormPage extends PageObject {
 
     public static Target EMAIL_FIELD = Target
@@ -60,4 +58,6 @@ public class FormPage extends PageObject {
     public static Target CONTINUE_BTN = Target
             .the("the continue button")
             .located(By.xpath("//button[@id = 'continue_button']"));
+
+
 }

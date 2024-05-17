@@ -58,7 +58,7 @@ dependencies {
             "net.serenity-bdd:serenity-ensure:${serenityEnsureVersion}",
 
             group: 'org.json', name: 'json', version: '20231013',
-            "org.projectlombok:lombok:${lombokVersion}",
+            //"org.projectlombok:lombok:${lombokVersion}",
             "ch.qos.logback:logback-classic:${logbackVersion}",
             "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotations}",
             "org.assertj:assertj-core:${assertJVersion}",

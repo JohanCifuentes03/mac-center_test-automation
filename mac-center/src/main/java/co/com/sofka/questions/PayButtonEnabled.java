@@ -15,4 +15,5 @@ public class PayButtonEnabled implements Question<Boolean> {
     public static PayButtonEnabled paymentButtonEnabled(){
         return new PayButtonEnabled();
     }
+
 }

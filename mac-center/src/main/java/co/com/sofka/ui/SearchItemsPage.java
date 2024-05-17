@@ -1,14 +1,13 @@
 package co.com.sofka.ui;
 
-import lombok.Getter;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
-import net.thucydides.core.pages.PageObject;
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 
 import java.util.List;
 
-@Getter
+
 public class SearchItemsPage extends PageObject {
 
     public static Target PRODUCTS_LIST_BUTTONS = Target
@@ -23,4 +22,7 @@ public class SearchItemsPage extends PageObject {
 
     public List<WebElementFacade> listOfProductButtons = PRODUCTS_LIST_BUTTONS.resolveAllFor(getDriver());
 
+    public List<WebElementFacade> getListOfProductButtons() {
+        return listOfProductButtons;
+    }
 }

@@ -1,6 +1,6 @@
 package co.com.sofka.tasks;
 
-import co.com.sofka.models.CartFormModel;
+import co.com.sofka.models.UserFormModel;
 import co.com.sofka.models.DebitCardModel;
 import co.com.sofka.ui.PaymentPage;
 import net.serenitybdd.screenplay.Actor;
@@ -18,12 +18,12 @@ import java.time.LocalDate;
 import java.util.Random;
 
 public class FillOutBBVAForm implements Task {
-    private CartFormModel cartFormModel;
+    private UserFormModel userFormModel;
     private DebitCardModel debitCardModel;
 
 
-    public FillOutBBVAForm withTheUser(CartFormModel cartFormModel) {
-        this.cartFormModel = cartFormModel;
+    public FillOutBBVAForm withTheUser(UserFormModel userFormModel) {
+        this.userFormModel = userFormModel;
         return this;
     }
 
@@ -42,13 +42,13 @@ public class FillOutBBVAForm implements Task {
 
         actor.attemptsTo(
                 Enter.theValue(debitCardModel.getNumber()).into(PaymentPage.CARD_NUMBER_INPUT),
-                Enter.theValue((cartFormModel.getName() + " " + cartFormModel.getLastname())).into(PaymentPage.CARD_NUMBER_NAME),
+                Enter.theValue((userFormModel.getName() + " " + userFormModel.getLastname())).into(PaymentPage.CARD_NUMBER_NAME),
                 SelectFromOptions.byValue(randomMonthS).from(PaymentPage.CARD_MONTH_BOX),
                 SelectFromOptions.byValue(String.valueOf(randomYear)).from(PaymentPage.CARD_YEAR_BOX),
                 Enter.theValue(debitCardModel.getCVV()).into(PaymentPage.CCV_NUMBER_INPUT),
                 SelectFromOptions.byValue("1").from(PaymentPage.CARD_INSTALLMENT),
                 SelectFromOptions.byValue("CC").from(PaymentPage.ID_TYPE_BOX),
-                Enter.theValue(cartFormModel.getId()).into(PaymentPage.DOC_NUMBER_FIELD),
+                Enter.theValue(userFormModel.getId()).into(PaymentPage.DOC_NUMBER_FIELD),
                 Scroll.to(PaymentPage.TERMS_CONDITIONS_CHECK_BOX),
                 Click.on(PaymentPage.TERMS_CONDITIONS_CHECK_BOX),
                 Wait.until(WebElementQuestion.the(PaymentPage.PAY_BUTTON),

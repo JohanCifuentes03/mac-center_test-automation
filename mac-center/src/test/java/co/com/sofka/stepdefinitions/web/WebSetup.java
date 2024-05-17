@@ -13,11 +13,10 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-
 public class WebSetup {
     @Managed
     protected static WebDriver webDriver;
+
     public static final Actor actor = new Actor("Johan");
 
     private void setupActor(WebDriver webDriver, String browserType) {

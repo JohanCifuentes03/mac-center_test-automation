@@ -2,7 +2,7 @@ package co.com.sofka.stepdefinitions.web;
 
 import java.util.List;
 import co.com.sofka.config.WebUrl;
-import co.com.sofka.models.CartFormModel;
+import co.com.sofka.models.UserFormModel;
 import co.com.sofka.models.DebitCardModel;
 import co.com.sofka.questions.CardNumber;
 import co.com.sofka.tasks.*;
@@ -20,6 +20,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class BuyItemsSD extends WebSetup {
     private final DebitCardModel debitCardModel = CreateModel.createDebitCardNumber();
+    private final UserFormModel userFormModel = CreateModel.createCartFormModel();
 
     @Given("the user is on the mac-center.com platform using {string}")
     public void theUserIsOnTheMacCenterComPlatformUsing(String webDriver) {
@@ -28,6 +29,7 @@ public class BuyItemsSD extends WebSetup {
                 OpenMain.openMainPage().withTheUrl(WebUrl.MAC_CENTER_LINK)
         );
     }
+
 
     @When("adds the following items to the cart")
     public void addsTheFollowingItemsToTheCart(List<String> items) {
@@ -47,18 +49,17 @@ public class BuyItemsSD extends WebSetup {
 
     @When("confirms their credentials using bbva payment method")
     public void confirmsTheirCredentialsUsingBbvaPaymentMethod() {
-        CartFormModel cartFormModel = CreateModel.createCartFormModel();
+
         actor.attemptsTo(
-                FillOutForm.fillOutForm().withTheUser(cartFormModel),
+                FillOutForm.fillOutForm().withTheUser(userFormModel),
                 ContinueToPayment.continueToPayment(),
                 SelectBbvaOption.selectBbvaOption(),
-                FillOutBBVAForm.fillOutBBVAForm().withTheUser(cartFormModel).andTheCard(debitCardModel)
+                FillOutBBVAForm.fillOutBBVAForm().withTheUser(userFormModel).andTheCard(debitCardModel)
         );
     }
 
     @Then("should receive a confirmation message indicating a successful purchase")
     public void shouldReceiveAConfirmationMessageIndicatingASuccessfulPurchase() {
-        System.out.println(CardNumber.allDigits());
         int last = debitCardModel.getNumber().length() - 1;
 
         actor.should(

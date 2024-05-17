@@ -1,6 +1,6 @@
 package co.com.sofka.tasks;
 
-import co.com.sofka.models.CartFormModel;
+import co.com.sofka.models.UserFormModel;
 import co.com.sofka.ui.FormPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -10,9 +10,10 @@ import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
 
 public class FillOutForm implements Task {
-    private CartFormModel cartFormModel;
-    public FillOutForm withTheUser(CartFormModel cartFormModel) {
-        this.cartFormModel = cartFormModel;
+    private UserFormModel userFormModel;
+
+    public FillOutForm withTheUser(UserFormModel userFormModel) {
+        this.userFormModel = userFormModel;
         return this;
     }
 
@@ -23,15 +24,15 @@ public class FillOutForm implements Task {
         String city = "BOGOTA /  BARRIOS UNIDOS";
 
         actor.attemptsTo(
-                Enter.theValue(cartFormModel.getEmail()).into(FormPage.EMAIL_FIELD),
+                Enter.theValue(userFormModel.getEmail()).into(FormPage.EMAIL_FIELD),
                 SelectFromOptions.byValue(idType).from(FormPage.ID_BOX),
-                Enter.theValue(cartFormModel.getId()).into(FormPage.ID_INPUT),
-                Enter.theValue(cartFormModel.getName()).into(FormPage.NAME_INPUT),
-                Enter.theValue(cartFormModel.getLastname()).into(FormPage.LASTNAME_INPUT),
-                Enter.theValue(cartFormModel.getDirection()).into(FormPage.ADDRESS_INPUT),
+                Enter.theValue(userFormModel.getId()).into(FormPage.ID_INPUT),
+                Enter.theValue(userFormModel.getName()).into(FormPage.NAME_INPUT),
+                Enter.theValue(userFormModel.getLastname()).into(FormPage.LASTNAME_INPUT),
+                Enter.theValue(userFormModel.getDirection()).into(FormPage.ADDRESS_INPUT),
                 SelectFromOptions.byValue(department).from(FormPage.DEPARTMENT_BOX),
                 SelectFromOptions.byValue(city).from(FormPage.CITY_BOX),
-                Enter.theValue(cartFormModel.getPhone()).into(FormPage.PHONE_INPUT),
+                Enter.theValue(userFormModel.getPhone()).into(FormPage.PHONE_INPUT),
                 Scroll.to(FormPage.CONTINUE_BTN)
         );
     }

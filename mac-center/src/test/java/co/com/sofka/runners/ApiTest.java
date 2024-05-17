@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/buy_items.feature",
+        features = "src/test/resources/features",
         glue = "co.com.sofka.stepdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        tags = "@service"
 )
-public class BuyItemsTest {
+public class ApiTest {
 }

@@ -4,6 +4,7 @@ Feature: Purchase items on mac-center.com
   So that I can enjoy and use them
 
   # generated data will be using data faker
+  @web
   Scenario Outline: Successfully purchase items
     Given the user is on the mac-center.com platform using "<webBrowser>"
     When adds the following items to the cart
@@ -17,3 +18,7 @@ Feature: Purchase items on mac-center.com
       | webBrowser |
       | chrome     |
       | edge       |
+
+
+
+
