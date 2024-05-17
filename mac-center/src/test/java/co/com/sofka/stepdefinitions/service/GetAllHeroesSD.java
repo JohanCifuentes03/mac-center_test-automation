@@ -1,6 +1,6 @@
 package co.com.sofka.stepdefinitions.service;
 
-import co.com.sofka.config.MarvelConstants;
+import co.com.sofka.config.MarvelUrls;
 import co.com.sofka.interactions.OurGet;
 import co.com.sofka.models.service.Hero;
 import co.com.sofka.models.service.MarvelResponse;
@@ -20,16 +20,16 @@ import static co.com.sofka.stepdefinitions.web.WebSetup.actor;
 public class GetAllHeroesSD extends ServiceSetup{
     @Given("the user is connected to the Marvel Developer API")
     public void theUserIsConnectedToTheMarvelDeveloperAPI() {
-        setupService(MarvelConstants.BASE_URL);
+        setupService(MarvelUrls.BASE_URL);
     }
 
     @When("sends a GET request to retrieve all heroes")
     public void sendsAGETRequestToRetrieveAllHeroes() {
         actor.attemptsTo(
-                OurGet.resource(MarvelConstants.GET_ALL_CHARACTERS_URL).with(request ->
+                OurGet.resource(MarvelUrls.GET_ALL_CHARACTERS_URL).with(request ->
                         request.queryParam("ts", 1)
-                                .queryParam("apikey", MarvelConstants.PUBLIC_API_KEY)
-                                .queryParam("hash", MarvelConstants.HASH)
+                                .queryParam("apikey", MarvelUrls.PUBLIC_API_KEY)
+                                .queryParam("hash", MarvelUrls.HASH)
                 )
         );
     }
