@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.vscode/settings.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DemoScreenPlay" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DemoScreenPlay" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DemoScreenPlay" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="serenity bdd" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2gVfzWpOBcNVm8k6nW2Jy3vurKm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Cucumber Java.Scenario: Successfully purchase items.executor": "Run",
+    "Gradle.DemoScreenPlay [aggregate].executor": "Run",
+    "Gradle.mac-center [checkOutcomes].executor": "Run",
+    "Gradle.mac-center [clearHistory].executor": "Run",
+    "Gradle.mac-center [clearReports].executor": "Run",
+    "Gradle.mac-center [history].executor": "Run",
+    "JUnit.ApiTest.executor": "Run",
+    "JUnit.BuyItemsTest.executor": "Run",
+    "JUnit.GeneralTest.executor": "Run",
+    "JUnit.RunnerCarrito.executor": "Run",
+    "JUnit.WebTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "johan.cifuentes",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Johan Cifuentes/Desktop/JAVA/mac-center_test-automation/mac-center/src/test/resources/features",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Johan Cifuentes\Desktop\JAVA\mac-center_test-automation\mac-center\src\test\resources\features" />
+      <recent name="C:\Users\Johan Cifuentes\Desktop\JAVA\mac-center\mac-center" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="co.com.sofka.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.DemoScreenPlay [aggregate]">
+    <configuration default="true" type="Application" factoryName="Application">
+      <shortenClasspath name="ARGS_FILE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Successfully purchase items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/buy_items.feature" />
+      <option name="GLUE" value="co.com.sofka.stepdefinitions.web net.serenitybdd.cucumber.actors" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DemoScreenPlay.test" />
+      <option name="NAME_FILTER" value="^Successfully purchase items$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Successfully purchase items$&quot;" />
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="SUGGESTED_NAME" value="Scenario: Successfully purchase items" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoScreenPlay [aggregate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="aggregate" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DemoScreenPlay.test" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.com.sofka.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.com.sofka.runners" />
+      <option name="MAIN_CLASS_NAME" value="co.com.sofka.runners.ApiTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneralTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DemoScreenPlay.test" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.com.sofka.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.com.sofka.runners" />
+      <option name="MAIN_CLASS_NAME" value="co.com.sofka.runners.GeneralTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DemoScreenPlay.test" />
+      <shortenClasspath name="ARGS_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.com.sofka.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="co.com.sofka.runners" />
+      <option name="MAIN_CLASS_NAME" value="co.com.sofka.runners.WebTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <shortenClasspath name="ARGS_FILE" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mac-center" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mac-center" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.DemoScreenPlay [aggregate]" />
+        <item itemvalue="JUnit.WebTest" />
+        <item itemvalue="Cucumber Java.Scenario: Successfully purchase items" />
+        <item itemvalue="JUnit.GeneralTest" />
+        <item itemvalue="JUnit.ApiTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="" />
+      <created>1715787927499</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715787927499</updated>
+    </task>
+    <servers />
+  </component>
+</project>
