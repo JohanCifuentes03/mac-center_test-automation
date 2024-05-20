@@ -5,29 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/CharactersResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/hooks/CharacterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/interactions/OurPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/ResponseSoap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/AddNumberSoapSD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/calculator.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/xml/add.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/models/service/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/HeroInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/runners/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/runners/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServiceUrls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServicesUrls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetAllHeroesSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetAllHeroesSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/13ae8925a1444b55f3a2be37a188aed3d20611a1f5b6058fdc37d761c4a033a5.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/13ae8925a1444b55f3a2be37a188aed3d20611a1f5b6058fdc37d761c4a033a5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/365b16e3ee6f0291b840b9644231fff9e30b16504a367cdf3c6abe85187cb1e6.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/365b16e3ee6f0291b840b9644231fff9e30b16504a367cdf3c6abe85187cb1e6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetSingleComicSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetSingleComicSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/ServiceSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/ServiceSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/6a3619b4edf20405eaf81a91a890b76dcb17c351ae7f615fb7ffdb858185c6c3.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/6a3619b4edf20405eaf81a91a890b76dcb17c351ae7f615fb7ffdb858185c6c3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/6e7ddca9b86c1e3301f9dad5351f5ca373d961175275a335992184136bbcfab2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/6e7ddca9b86c1e3301f9dad5351f5ca373d961175275a335992184136bbcfab2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/7ca3aac86b4a3785e624e0f6a1b14d1c5eaea8bfc79afaab5491caf9e43beaf2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/7ca3aac86b4a3785e624e0f6a1b14d1c5eaea8bfc79afaab5491caf9e43beaf2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/b4c6919a799a7c404df67869b76e740d258b4233a21c8544201d532ee1f71d04.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/b4c6919a799a7c404df67869b76e740d258b4233a21c8544201d532ee1f71d04.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/capabilities.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/capabilities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/serenity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

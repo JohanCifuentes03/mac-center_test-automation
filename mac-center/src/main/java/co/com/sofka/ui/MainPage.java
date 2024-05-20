@@ -10,5 +10,4 @@ public class MainPage extends PageObject {
     public static Target LOGIN_ICON = Target.the("the register icon").located(By.xpath("(//*[@class='icon icon-account'])[2]"));
     public static Target BANNER_PIVOT = Target.the("the banner").located(By.xpath("//div[@id='lob_stripe_slider_box']"));
 
-
 }
