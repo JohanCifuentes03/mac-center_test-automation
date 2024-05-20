@@ -1,6 +1,6 @@
 package co.com.sofka.stepdefinitions.service;
 
-import co.com.sofka.config.ServiceUrls;
+import co.com.sofka.config.ServicesUrls;
 import co.com.sofka.interactions.OurGet;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,10 +14,10 @@ public class GetSingleComicSD extends ServiceSetup{
     @When("sends a GET request using id {int}")
     public void sendsAGETRequestUsingId(Integer comicId) {
         actor.attemptsTo(
-                OurGet.resource(ServiceUrls.GET_SINGLE_COMIC_URL).with(request ->
+                OurGet.resource(ServicesUrls.GET_SINGLE_COMIC_URL).with(request ->
                         request.queryParam("ts", 1)
-                                .queryParam("apikey", ServiceUrls.PUBLIC_API_KEY)
-                                .queryParam("hash", ServiceUrls.HASH)
+                                .queryParam("apikey", ServicesUrls.PUBLIC_API_KEY)
+                                .queryParam("hash", ServicesUrls.HASH)
                                 .pathParam("id", comicId)
                 )
         );

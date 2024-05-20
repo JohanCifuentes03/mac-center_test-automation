@@ -9,8 +9,7 @@ import net.serenitybdd.screenplay.Task;
 public class DoGet implements Task {
 
     private String resource;
-
-    public DoGet withTheResource(String resource){
+    public DoGet withResource(String resource){
         this.resource=resource;
         return this;
     }
