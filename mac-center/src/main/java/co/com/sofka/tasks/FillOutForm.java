@@ -19,6 +19,8 @@ public class FillOutForm implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
+
         String idType = "Cédula de Ciudadanía";
         String department = "Bogota DC";
         String city = "BOGOTA /  BARRIOS UNIDOS";
