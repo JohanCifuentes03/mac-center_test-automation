@@ -4,6 +4,7 @@ import co.com.sofka.config.ServiceUrls;
 import co.com.sofka.interactions.OurGet;
 import co.com.sofka.models.service.Hero;
 import co.com.sofka.models.service.MarvelResponse;
+import co.com.sofka.questions.HeroInformation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -17,7 +18,7 @@ import java.util.List;
 
 import static co.com.sofka.stepdefinitions.web.WebSetup.actor;
 
-public class GetAllHeroesSD extends ServiceSetup{
+public class GetAllHeroesSD extends ServiceSetup {
     @Given("the user is connected to the Marvel Developer API")
     public void theUserIsConnectedToTheMarvelDeveloperAPI() {
         setupService(ServiceUrls.BASE_URL);
@@ -40,26 +41,12 @@ public class GetAllHeroesSD extends ServiceSetup{
                 .map(row -> new Hero(row.get("id"), row.get("name")))
                 .toList();
 
-        String jsonResponse = SerenityRest.lastResponse().getBody().asString();
-        ObjectMapper objectMapper = new ObjectMapper();
+        boolean result = actor.asksFor(HeroInformation.containsInformationAbout(expectedHeroes));
 
-
-        try {
-            MarvelResponse marvelResponse = objectMapper.readValue(jsonResponse, MarvelResponse.class);
-            List<Hero> heroes = marvelResponse.getData().getResults();
-
-            for (Hero expectedHero : expectedHeroes) {
-                boolean heroFound = heroes.stream()
-                        .anyMatch(hero -> hero.getId().equals(expectedHero.getId()) && hero.getName().equals(expectedHero.getName()));
-
-                if (!heroFound) {
-                    throw new AssertionError("Hero not found: " + expectedHero.getName() + " with ID " + expectedHero.getId());
-                }
-            }
-
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        if (!result) {
+            throw new AssertionError("Expected heroes not found in the response");
         }
+
     }
 
     @Then("should receive a response of {int}")
