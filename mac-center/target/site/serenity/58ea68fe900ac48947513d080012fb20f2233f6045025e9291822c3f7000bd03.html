@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Search single comic</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="#">Search single comic using GET service</a>
+        > Search single comic
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 19:59</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
+                                        <span class="story-header-title">Search Single Comic Using GET Service </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="6a3619b4edf20405eaf81a91a890b76dcb17c351ae7f615fb7ffdb858185c6c3.html">Service
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                              (Duration)
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="2a5b6a7be0f08df02d8ab0b4d4c68648c2695c6c7ef0658c71de4d42b1415b18.html">Under 1 Second
+                                              (Duration)
+                                        </a>
+                                </span>
+                                    
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Search single comic
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- CAST MEMBERS -->
+            <div>&nbsp;</div>
+            <div>
+                <h3 class="discreet-story-header">
+                    <i class="fs-2 bi bi-people large-icon"></i>
+                    <span class="story-header-title">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#castDetails"
+                           role="button" aria-expanded="true" aria-controls="castDetails">Cast</a>
+                    </span>
+                </h3>
+            </div>
+            <div class="collapse multi-collapse" id="castDetails">
+                <table class="cast">
+                    <tr>
+                            <td width="100%">
+                                <h4>
+                                    <i class="fs-2 bi bi-person"></i>&nbsp;
+                                    <span>
+                                        <a data-toggle="collapse" href="#abilities-Johan"
+                                           aria-expanded="false" aria-controls="abilities">Johan</a>
+                                        
+                                    </span>
+                                </h4>
+                                <div class="collapse multi-collapse" id="abilities-Johan">
+                                        <div>
+                                            <span class="cast-description">Johan can:</span>
+                                            <ul>
+                                                    <li>call an API at https://gateway.marvel.com</li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <!-- END CAST MEMBERS -->
+
+
+</div>
+</div>
+
+<div class="clr"></div>
+
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">Given the user is connected to the Marvel Developer API<br>When sends a GET request using id &lt;id&gt;<br>Then comic name should be &lt;title&gt;<br>And should receive a response of 200</div>
+
+    </div>
+
+<div id="beforetable"></div>
+
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Id</th>
+                        <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">1332</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">"X-Men: Days of Future Past (Trade Paperback)"</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#1">2</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">1308</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#1">"Marvel Age Spider-Man Vol. 2: Everyday Hero (Digest)"</a>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#2">3</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#2">15094</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#2">"Silver Surfer (1987)"</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+<div id="tablecontents">
+    <div>
+        <table class="step-table">
+            <tr class="step-titles">
+                <th width="65">
+                </th>
+                <th class="step-description-column greentext">
+                    Steps
+                </th>
+
+                <th width="130" class="greentext">Outcome</th>
+                <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
+            </tr>
+            <tr class="step-table-separator">
+                <td colspan="5"></td>
+            </tr>
+
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                1: Search single comic ({id=1332, title="X-Men: Days of Future Past (Trade Paperback)"})
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">1s 622ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Given the user is connected to the Marvel Developer API
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">007ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                When sends a GET request using id 1332
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">796ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-1-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-1-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Johan our get
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">782ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-1-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-1-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                GET https://gateway.marvel.com/v1/public/comics/1332?ts=1&amp;apikey=b41d14e5440d6cc1519c67b31f64af68&amp;hash=d04d92d0727ab76f46b940883b00a3d0
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://gateway.marvel.com/v1/public/comics/1332?ts=1&apikey=b41d14e5440d6cc1519c67b31f64af68&hash=d04d92d0727ab76f46b940883b00a3d0</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Content-Encoding: gzip<br>ETag: da22683b9808bd87bb7cf6571c7cd935ae368d22<br>Content-Type: application/json; charset=utf-8<br>Date: Mon, 20 May 2024 01:13:04 GMT<br>Connection: keep-alive<br>Transfer-Encoding: chunked</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;status&quot;: &quot;Ok&quot;,<br>    &quot;copyright&quot;: &quot;© 2024 MARVEL&quot;,<br>    &quot;attributionText&quot;: &quot;Data provided by Marvel. © 2024 MARVEL&quot;,<br>    &quot;attributionHTML&quot;: &quot;&lt;a href=\&quot;http://marvel.com\&quot;&gt;Data provided by Marvel. © 2024 MARVEL&lt;/a&gt;&quot;,<br>    &quot;etag&quot;: &quot;da22683b9808bd87bb7cf6571c7cd935ae368d22&quot;,<br>    &quot;data&quot;: {<br>        &quot;offset&quot;: 0,<br>        &quot;limit&quot;: 20,<br>        &quot;total&quot;: 1,<br>        &quot;count&quot;: 1,<br>        &quot;results&quot;: [<br>            {<br>                &quot;id&quot;: 1332,<br>                &quot;digitalId&quot;: 0,<br>                &quot;title&quot;: &quot;X-Men: Days of Future Past (Trade Paperback)&quot;,<br>                &quot;issueNumber&quot;: 0,<br>                &quot;variantDescription&quot;: &quot;&quot;,<br>                &quot;description&quot;: &quot;&quot;,<br>                &quot;modified&quot;: &quot;2017-02-28T14:52:22-0500&quot;,<br>                &quot;isbn&quot;: &quot;0-7851-1560-9&quot;,<br>                &quot;upc&quot;: &quot;5960611560-00111&quot;,<br>                &quot;diamondCode&quot;: &quot;&quot;,<br>                &quot;ean&quot;: &quot;&quot;,<br>                &quot;issn&quot;: &quot;&quot;,<br>                &quot;format&quot;: &quot;Trade Paperback&quot;,<br>                &quot;pageCount&quot;: 144,<br>                &quot;textObjects&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;issue_solicit_text&quot;,<br>                        &quot;language&quot;: &quot;en-us&quot;,<br>                        &quot;text&quot;: &quot;\&quot;Re-live the legendary first journey into the dystopian future of 2013 - where Sentinels stalk the Earth, and the X-Men are humanity's only hope...until they die! Also featuring the first appearance of Alpha Flight, the return of the Wendigo, the history of the X-Men from Cyclops himself...and a demon for Christmas!? \&quot;&quot;<br>                    }<br>                ],<br>                &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1332&quot;,<br>                &quot;urls&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;detail&quot;,<br>                        &quot;url&quot;: &quot;http://marvel.com/comics/collection/1332/x-men_days_of_future_past_trade_paperback?utm_campaign=apiRef&amp;utm_source=b41d14e5440d6cc1519c67b31f64af68&quot;<br>                    }<br>                ],<br>                &quot;series&quot;: {<br>                    &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/series/1327&quot;,<br>                    &quot;name&quot;: &quot;X-Men: Days of Future Past (2004)&quot;<br>                },<br>                &quot;variants&quot;: [<br>                    <br>                ],<br>                &quot;collections&quot;: [<br>                    <br>                ],<br>                &quot;collectedIssues&quot;: [<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/13683&quot;,<br>                        &quot;name&quot;: &quot;Uncanny X-Men (1963) #142&quot;<br>                    },<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/12460&quot;,<br>                        &quot;name&quot;: &quot;Uncanny X-Men (1963) #141&quot;<br>                    }<br>                ],<br>                &quot;dates&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;onsaleDate&quot;,<br>                        &quot;date&quot;: &quot;2029-12-31T00:00:00-0500&quot;<br>                    },<br>                    {<br>                        &quot;type&quot;: &quot;focDate&quot;,<br>                        &quot;date&quot;: &quot;-0001-11-30T00:00:00-0500&quot;<br>                    }<br>                ],<br>                &quot;prices&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;printPrice&quot;,<br>                        &quot;price&quot;: 9.99<br>                    }<br>                ],<br>                &quot;thumbnail&quot;: {<br>                    &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/9/d0/58b5cfb6d5239&quot;,<br>                    &quot;extension&quot;: &quot;jpg&quot;<br>                },<br>                &quot;images&quot;: [<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/9/d0/58b5cfb6d5239&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/9/b0/4bc66463ef7f0&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    }<br>                ],<br>                &quot;creators&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1332/creators&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                },<br>                &quot;characters&quot;: {<br>                    &quot;available&quot;: 10,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1332/characters&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009159&quot;,<br>                            &quot;name&quot;: &quot;Archangel&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009164&quot;,<br>                            &quot;name&quot;: &quot;Avalanche&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009199&quot;,<br>                            &quot;name&quot;: &quot;Blob&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009243&quot;,<br>                            &quot;name&quot;: &quot;Colossus&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009271&quot;,<br>                            &quot;name&quot;: &quot;Destiny&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009472&quot;,<br>                            &quot;name&quot;: &quot;Nightcrawler&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009522&quot;,<br>                            &quot;name&quot;: &quot;Pyro&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009629&quot;,<br>                            &quot;name&quot;: &quot;Storm&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009718&quot;,<br>                            &quot;name&quot;: &quot;Wolverine&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009726&quot;,<br>                            &quot;name&quot;: &quot;X-Men&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 10<br>                },<br>                &quot;stories&quot;: {<br>                    &quot;available&quot;: 3,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1332/stories&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/15472&quot;,<br>                            &quot;name&quot;: &quot;Days of Future Past&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/27788&quot;,<br>                            &quot;name&quot;: &quot;Mind Out of Time!&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/65738&quot;,<br>                            &quot;name&quot;: &quot;X-MEN: DAYS OF FUTURE PAST TPB 0 cover&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 3<br>                },<br>                &quot;events&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1332/events&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                }<br>            }<br>        ]<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">007ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then comic name should be "X-Men: Days of Future Past (Trade Paperback)"
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">793ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Title should be equal
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">783ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                And should receive a response of 200
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">009ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                2: Search single comic ({id=1308, title="Marvel Age Spider-Man Vol. 2: Everyday Hero (Digest)"})
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">814ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Given the user is connected to the Marvel Developer API
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">008ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                When sends a GET request using id 1308
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">737ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-1-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-1-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Johan our get
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">721ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-1-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="1-1-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                GET https://gateway.marvel.com/v1/public/comics/1308?ts=1&amp;apikey=b41d14e5440d6cc1519c67b31f64af68&amp;hash=d04d92d0727ab76f46b940883b00a3d0
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-13">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-13">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://gateway.marvel.com/v1/public/comics/1308?ts=1&apikey=b41d14e5440d6cc1519c67b31f64af68&hash=d04d92d0727ab76f46b940883b00a3d0</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Content-Encoding: gzip<br>ETag: a17b3fd41803c288336a0bc6bd22bc3404efe5da<br>Content-Type: application/json; charset=utf-8<br>Date: Mon, 20 May 2024 01:13:05 GMT<br>Connection: keep-alive<br>Transfer-Encoding: chunked</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;status&quot;: &quot;Ok&quot;,<br>    &quot;copyright&quot;: &quot;© 2024 MARVEL&quot;,<br>    &quot;attributionText&quot;: &quot;Data provided by Marvel. © 2024 MARVEL&quot;,<br>    &quot;attributionHTML&quot;: &quot;&lt;a href=\&quot;http://marvel.com\&quot;&gt;Data provided by Marvel. © 2024 MARVEL&lt;/a&gt;&quot;,<br>    &quot;etag&quot;: &quot;a17b3fd41803c288336a0bc6bd22bc3404efe5da&quot;,<br>    &quot;data&quot;: {<br>        &quot;offset&quot;: 0,<br>        &quot;limit&quot;: 20,<br>        &quot;total&quot;: 1,<br>        &quot;count&quot;: 1,<br>        &quot;results&quot;: [<br>            {<br>                &quot;id&quot;: 1308,<br>                &quot;digitalId&quot;: 0,<br>                &quot;title&quot;: &quot;Marvel Age Spider-Man Vol. 2: Everyday Hero (Digest)&quot;,<br>                &quot;issueNumber&quot;: 0,<br>                &quot;variantDescription&quot;: &quot;&quot;,<br>                &quot;description&quot;: &quot;&quot;,<br>                &quot;modified&quot;: &quot;2018-01-22T15:42:11-0500&quot;,<br>                &quot;isbn&quot;: &quot;0-7851-1451-3&quot;,<br>                &quot;upc&quot;: &quot;5960611451-00111&quot;,<br>                &quot;diamondCode&quot;: &quot;&quot;,<br>                &quot;ean&quot;: &quot;&quot;,<br>                &quot;issn&quot;: &quot;&quot;,<br>                &quot;format&quot;: &quot;Digest&quot;,<br>                &quot;pageCount&quot;: 96,<br>                &quot;textObjects&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;issue_solicit_text&quot;,<br>                        &quot;language&quot;: &quot;en-us&quot;,<br>                        &quot;text&quot;: &quot;\&quot;The Marvel Age of Comics continues! This time around, Spidey meets his match against such classic villains as Electro and the Lizard, and faces the return of one of his first foes: the Vulture! Plus: Spider-Man vs. the Living Brain, Peter Parker's fight with Flash Thompson, and the wall-crawler tackles the high-flying Human Torch!\&quot;&quot;<br>                    }<br>                ],<br>                &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1308&quot;,<br>                &quot;urls&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;detail&quot;,<br>                        &quot;url&quot;: &quot;http://marvel.com/comics/collection/1308/marvel_age_spider-man_vol_2_everyday_hero_digest?utm_campaign=apiRef&amp;utm_source=b41d14e5440d6cc1519c67b31f64af68&quot;<br>                    }<br>                ],<br>                &quot;series&quot;: {<br>                    &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/series/1242&quot;,<br>                    &quot;name&quot;: &quot;Marvel Age Spider-Man Vol. 2: Everyday Hero (2004)&quot;<br>                },<br>                &quot;variants&quot;: [<br>                    <br>                ],<br>                &quot;collections&quot;: [<br>                    <br>                ],<br>                &quot;collectedIssues&quot;: [<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/546&quot;,<br>                        &quot;name&quot;: &quot;Marvel Age Spider-Man (2004) #8&quot;<br>                    },<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/610&quot;,<br>                        &quot;name&quot;: &quot;Marvel Age Spider-Man (2004) #7&quot;<br>                    },<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/728&quot;,<br>                        &quot;name&quot;: &quot;Marvel Age Spider-Man (2004) #6&quot;<br>                    },<br>                    {<br>                        &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/681&quot;,<br>                        &quot;name&quot;: &quot;Marvel Age Spider-Man (2004) #5&quot;<br>                    }<br>                ],<br>                &quot;dates&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;onsaleDate&quot;,<br>                        &quot;date&quot;: &quot;2029-12-31T00:00:00-0500&quot;<br>                    },<br>                    {<br>                        &quot;type&quot;: &quot;focDate&quot;,<br>                        &quot;date&quot;: &quot;-0001-11-30T00:00:00-0500&quot;<br>                    }<br>                ],<br>                &quot;prices&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;printPrice&quot;,<br>                        &quot;price&quot;: 5.99<br>                    }<br>                ],<br>                &quot;thumbnail&quot;: {<br>                    &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/9/20/4bc665483c3aa&quot;,<br>                    &quot;extension&quot;: &quot;jpg&quot;<br>                },<br>                &quot;images&quot;: [<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/6/90/5a664c954a55b&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/f/80/5a6648f8aaccc&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/c/c0/5a6648efbc46c&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/4/00/5a6648c368f52&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/a/40/4bc689a4ce796&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/a/c0/4bc684889f8ed&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/c/50/4bc6809bdc81b&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    },<br>                    {<br>                        &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/9/20/4bc665483c3aa&quot;,<br>                        &quot;extension&quot;: &quot;jpg&quot;<br>                    }<br>                ],<br>                &quot;creators&quot;: {<br>                    &quot;available&quot;: 10,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1308/creators&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/694&quot;,<br>                            &quot;name&quot;: &quot;Mark Brooks&quot;,<br>                            &quot;role&quot;: &quot;penciller (cover)&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/434&quot;,<br>                            &quot;name&quot;: &quot;Michael Ryan&quot;,<br>                            &quot;role&quot;: &quot;penciller (cover)&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/424&quot;,<br>                            &quot;name&quot;: &quot;Udon Comics&quot;,<br>                            &quot;role&quot;: &quot;colorist&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/692&quot;,<br>                            &quot;name&quot;: &quot;Pat Davidson&quot;,<br>                            &quot;role&quot;: &quot;inker&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/689&quot;,<br>                            &quot;name&quot;: &quot;Derek Fridolfs&quot;,<br>                            &quot;role&quot;: &quot;inker&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/6743&quot;,<br>                            &quot;name&quot;: &quot;Rich Perrotta&quot;,<br>                            &quot;role&quot;: &quot;inker&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/682&quot;,<br>                            &quot;name&quot;: &quot;Todd Dezago&quot;,<br>                            &quot;role&quot;: &quot;writer&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/326&quot;,<br>                            &quot;name&quot;: &quot;Daniel Quantz&quot;,<br>                            &quot;role&quot;: &quot;writer&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/691&quot;,<br>                            &quot;name&quot;: &quot;Jonboy Meyers&quot;,<br>                            &quot;role&quot;: &quot;penciller&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/creators/688&quot;,<br>                            &quot;name&quot;: &quot;Michael OHare&quot;,<br>                            &quot;role&quot;: &quot;penciller&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 10<br>                },<br>                &quot;characters&quot;: {<br>                    &quot;available&quot;: 1,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1308/characters&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/characters/1009610&quot;,<br>                            &quot;name&quot;: &quot;Spider-Man (Peter Parker)&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 1<br>                },<br>                &quot;stories&quot;: {<br>                    &quot;available&quot;: 9,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1308/stories&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2759&quot;,<br>                            &quot;name&quot;: &quot;Cover #2759&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2760&quot;,<br>                            &quot;name&quot;: &quot;Interior #2760&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2763&quot;,<br>                            &quot;name&quot;: &quot;Cover #2763&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2764&quot;,<br>                            &quot;name&quot;: &quot;Interior #2764&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2769&quot;,<br>                            &quot;name&quot;: &quot;Cover #2769&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2770&quot;,<br>                            &quot;name&quot;: &quot;Interior #2770&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2771&quot;,<br>                            &quot;name&quot;: &quot;Cover #2771&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/2772&quot;,<br>                            &quot;name&quot;: &quot;Interior #2772&quot;,<br>                            &quot;type&quot;: &quot;interiorStory&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/65682&quot;,<br>                            &quot;name&quot;: &quot;MARVEL AGE SPIDER-MAN VOL. 2: EVERYDAY HERO 0 cover&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 9<br>                },<br>                &quot;events&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/1308/events&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                }<br>            }<br>        ]<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">002ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection1-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then comic name should be "Marvel Age Spider-Man Vol. 2: Everyday Hero (Digest)"
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">047ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Title should be equal
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">037ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                And should receive a response of 200
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">008ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                3: Search single comic ({id=15094, title="Silver Surfer (1987)"})
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">797ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-0"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Given the user is connected to the Marvel Developer API
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">013ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                When sends a GET request using id 15094
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">722ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-1-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-1-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Johan our get
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">712ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-1-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="2-1-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                GET https://gateway.marvel.com/v1/public/comics/15094?ts=1&amp;apikey=b41d14e5440d6cc1519c67b31f64af68&amp;hash=d04d92d0727ab76f46b940883b00a3d0
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-21">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-21">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://gateway.marvel.com/v1/public/comics/15094?ts=1&apikey=b41d14e5440d6cc1519c67b31f64af68&hash=d04d92d0727ab76f46b940883b00a3d0</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Content-Encoding: gzip<br>ETag: 6eff191c6e8ab7811efb58e5f026baadd0e892d9<br>Content-Type: application/json; charset=utf-8<br>Date: Mon, 20 May 2024 01:13:06 GMT<br>Connection: keep-alive<br>Transfer-Encoding: chunked</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;code&quot;: 200,<br>    &quot;status&quot;: &quot;Ok&quot;,<br>    &quot;copyright&quot;: &quot;© 2024 MARVEL&quot;,<br>    &quot;attributionText&quot;: &quot;Data provided by Marvel. © 2024 MARVEL&quot;,<br>    &quot;attributionHTML&quot;: &quot;&lt;a href=\&quot;http://marvel.com\&quot;&gt;Data provided by Marvel. © 2024 MARVEL&lt;/a&gt;&quot;,<br>    &quot;etag&quot;: &quot;6eff191c6e8ab7811efb58e5f026baadd0e892d9&quot;,<br>    &quot;data&quot;: {<br>        &quot;offset&quot;: 0,<br>        &quot;limit&quot;: 20,<br>        &quot;total&quot;: 1,<br>        &quot;count&quot;: 1,<br>        &quot;results&quot;: [<br>            {<br>                &quot;id&quot;: 15094,<br>                &quot;digitalId&quot;: 0,<br>                &quot;title&quot;: &quot;Silver Surfer (1987)&quot;,<br>                &quot;issueNumber&quot;: 0,<br>                &quot;variantDescription&quot;: &quot;&quot;,<br>                &quot;description&quot;: null,<br>                &quot;modified&quot;: &quot;-0001-11-30T00:00:00-0500&quot;,<br>                &quot;isbn&quot;: &quot;&quot;,<br>                &quot;upc&quot;: &quot;&quot;,<br>                &quot;diamondCode&quot;: &quot;&quot;,<br>                &quot;ean&quot;: &quot;&quot;,<br>                &quot;issn&quot;: &quot;&quot;,<br>                &quot;format&quot;: &quot;Comic&quot;,<br>                &quot;pageCount&quot;: 0,<br>                &quot;textObjects&quot;: [<br>                    <br>                ],<br>                &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/15094&quot;,<br>                &quot;urls&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;detail&quot;,<br>                        &quot;url&quot;: &quot;http://marvel.com/comics/issue/15094/silver_surfer_1987?utm_campaign=apiRef&amp;utm_source=b41d14e5440d6cc1519c67b31f64af68&quot;<br>                    }<br>                ],<br>                &quot;series&quot;: {<br>                    &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/series/2288&quot;,<br>                    &quot;name&quot;: &quot;Silver Surfer (1987 - 1998)&quot;<br>                },<br>                &quot;variants&quot;: [<br>                    <br>                ],<br>                &quot;collections&quot;: [<br>                    <br>                ],<br>                &quot;collectedIssues&quot;: [<br>                    <br>                ],<br>                &quot;dates&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;onsaleDate&quot;,<br>                        &quot;date&quot;: &quot;2029-12-31T00:00:00-0500&quot;<br>                    },<br>                    {<br>                        &quot;type&quot;: &quot;focDate&quot;,<br>                        &quot;date&quot;: &quot;-0001-11-30T00:00:00-0500&quot;<br>                    }<br>                ],<br>                &quot;prices&quot;: [<br>                    {<br>                        &quot;type&quot;: &quot;printPrice&quot;,<br>                        &quot;price&quot;: 0<br>                    }<br>                ],<br>                &quot;thumbnail&quot;: {<br>                    &quot;path&quot;: &quot;http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available&quot;,<br>                    &quot;extension&quot;: &quot;jpg&quot;<br>                },<br>                &quot;images&quot;: [<br>                    <br>                ],<br>                &quot;creators&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/15094/creators&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                },<br>                &quot;characters&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/15094/characters&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                },<br>                &quot;stories&quot;: {<br>                    &quot;available&quot;: 2,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/15094/stories&quot;,<br>                    &quot;items&quot;: [<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/30658&quot;,<br>                            &quot;name&quot;: &quot;&quot;,<br>                            &quot;type&quot;: &quot;&quot;<br>                        },<br>                        {<br>                            &quot;resourceURI&quot;: &quot;http://gateway.marvel.com/v1/public/stories/67348&quot;,<br>                            &quot;name&quot;: &quot;silver surfer 0 cover&quot;,<br>                            &quot;type&quot;: &quot;cover&quot;<br>                        }<br>                    ],<br>                    &quot;returned&quot;: 2<br>                },<br>                &quot;events&quot;: {<br>                    &quot;available&quot;: 0,<br>                    &quot;collectionURI&quot;: &quot;http://gateway.marvel.com/v1/public/comics/15094/events&quot;,<br>                    &quot;items&quot;: [<br>                        <br>                    ],<br>                    &quot;returned&quot;: 0<br>                }<br>            }<br>        ]<br>    }<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">004ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-2"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection2-2 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then comic name should be "Silver Surfer (1987)"
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">031ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection2-2" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="2-2-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Title should be equal
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">024ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="2-3"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                And should receive a response of 200
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">013ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-SUCCESS">
+                    <td colspan="2"></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.01s</em></span></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div id="beforefooter"></div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 4.0.46</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggleDiv(divId) {
+        $("#" + divId).toggle();
+        var $icon = $(".img" + divId);
+        $icon.toggleClass("bi-caret-right-square");
+        $icon.toggleClass("bi-caret-down-square");
+    }
+</script>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    $(document).ready(function () {
+        $('img.screenshot').imgPreview({
+            imgCSS: {
+                width: '500px'
+            },
+            distanceFromCursor: {top: 10, left: -200}
+        });
+    });
+
+    //]]>
+</script>
+<div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+<div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+    <img style="width: 200px; display: none; " src=""></div>
+<div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+    <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+<div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+<div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

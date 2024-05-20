@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="73f89d7a84fca7ece420eea35f0502cffac836e01d48359384634333cf297d13.html">Purchase Items On Mac-Center.com</a></span>
+                > <span class="truncate-60"><a
+                    href="0221b05bc4b42a1413702784c5b92ddbb7c9a1b7dce5f10a9035dcc23fde76bf.html">Successfully purchase items using Efecty </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 19:55</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Purchase Items On Mac-Center.com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user of the mac-center.com platform<br />
+I want to buy various items<br />
+So that I can enjoy and use them
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5ab719a1ade53bcad8f7ba936bd6946a7cdaec7e6ac02c942a4e44254d1f4e67.html">Web Efecty
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Successfully purchase items using Efecty
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user is on the mac-center.com platform using "&lt;webBrowser&gt;"<br>When adds the following items to the cart<br><table class='embedded'><tbody><tr><td>Iphone 15 pro max</td></tr><tr><td>Apple Watch</td></tr><tr><td>iPad pro</td></tr></tbody></table><br>And goes to the cart<br>And confirms their credentials using efecty payment method<br>Then should be able to confirm the payment</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" 1: Successfully purchase items using Efecty ({webBrowser=chrome})" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Given the user is on the mac-center.com platform using &quot;chrome&quot;" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Johan open main" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Johan opens the browser at https://mac-center.com/" width="0"/>
+                <img src="cc2a68ae47aefe2a3934cc92374afcc198f4dadf627ee104190bb62313f08128.png" title=" Johan opens the browser at https://mac-center.com/ (completed)" width="0"/>
+                <img src="cc2a68ae47aefe2a3934cc92374afcc198f4dadf627ee104190bb62313f08128.png" title=" Johan open main (completed)" width="0"/>
+                <img src="cc2a68ae47aefe2a3934cc92374afcc198f4dadf627ee104190bb62313f08128.png" title=" Given the user is on the mac-center.com platform using &quot;chrome&quot; (completed)" width="0"/>
+                <img src="cc2a68ae47aefe2a3934cc92374afcc198f4dadf627ee104190bb62313f08128.png" title=" When adds the following items to the cart
+| Iphone 15 pro max |
+| Apple Watch |
+| iPad pro |" width="0"/>
+                <img src="20f9eed44c5e6095a20d74ab8f9b52ff218b45047f05b87f564d2fb4b87355d9.png" title=" Johan search item" width="0"/>
+                <img src="f7858d7f052b571792ba1c1f8ee2509d9724d20ab87e5cbe471fd2cef294f261.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="2560f8d87863117be9fa28ec67af6b6ff00fef48ba534cec1bb68e486accc518.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="2560f8d87863117be9fa28ec67af6b6ff00fef48ba534cec1bb68e486accc518.png" title=" Johan enters 'Iphone 15 pro max',ENTER into the search box" width="0"/>
+                <img src="ed1eebaaa3731aa3a5c2f5ab090d3400e7c57896d613048040459bcfffed52bd.png" title=" Johan enters 'Iphone 15 pro max',ENTER into the search box (completed)" width="0"/>
+                <img src="5ed95dad0bdc4baa7b32bca0df4d1015b345dca553a1e761d67339ddb7854c62.png" title=" Johan search item (completed)" width="0"/>
+                <img src="5ed95dad0bdc4baa7b32bca0df4d1015b345dca553a1e761d67339ddb7854c62.png" title=" Johan add item to cart" width="0"/>
+                <img src="213e7583e76e828c8b84a46cdebccce8f523767ff5432d4098da8b3a09b0c104.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="4359e09b62e84e16bdfe4d72fbbf2067b8d735cb14ac6f87bbc6b8ff3b9c3703.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="e94988732956dcaff118d57dba2f75ec8822d9180e66031418077dc40ebae856.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="f4cf8a83bcf58558448f4d5eb41f0935dfddf13183429c3b41163a1e31ed97ab.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="f4cf8a83bcf58558448f4d5eb41f0935dfddf13183429c3b41163a1e31ed97ab.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="f4cf8a83bcf58558448f4d5eb41f0935dfddf13183429c3b41163a1e31ed97ab.png" title=" Johan search item" width="0"/>
+                <img src="f4cf8a83bcf58558448f4d5eb41f0935dfddf13183429c3b41163a1e31ed97ab.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="5b87fad0e89dc587919d3bb318e425e7964332a480562953715732eee0d8955b.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="5b87fad0e89dc587919d3bb318e425e7964332a480562953715732eee0d8955b.png" title=" Johan enters 'Apple Watch',ENTER into the search box" width="0"/>
+                <img src="d1c648bd124a077137aedf0be3aee74fb89b7c731384fa9e7437078f3213a142.png" title=" Johan enters 'Apple Watch',ENTER into the search box (completed)" width="0"/>
+                <img src="02cc224f0ad0d0d9cf045724c68cce033f3cea928a1489eb9bf9d8e3a3ae142b.png" title=" Johan search item (completed)" width="0"/>
+                <img src="02cc224f0ad0d0d9cf045724c68cce033f3cea928a1489eb9bf9d8e3a3ae142b.png" title=" Johan add item to cart" width="0"/>
+                <img src="02cc224f0ad0d0d9cf045724c68cce033f3cea928a1489eb9bf9d8e3a3ae142b.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="2ab607d08fc8344949d19441eb8de3dca21b252ed053ded90f86e41faa137055.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="0ae092f1bf53b4b760fc6e552f94c0ad7563017f0857c8019a960244f86bc263.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="be3981f009cb09b72f6f239b60de1960cb39bee82d270f54836afd453ddebc12.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="be3981f009cb09b72f6f239b60de1960cb39bee82d270f54836afd453ddebc12.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="be3981f009cb09b72f6f239b60de1960cb39bee82d270f54836afd453ddebc12.png" title=" Johan search item" width="0"/>
+                <img src="be3981f009cb09b72f6f239b60de1960cb39bee82d270f54836afd453ddebc12.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="d1656a2ca57bc070a14841eb919161e8e724e79fb2dd8e1d39c45a2753566019.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="d1656a2ca57bc070a14841eb919161e8e724e79fb2dd8e1d39c45a2753566019.png" title=" Johan enters 'iPad pro',ENTER into the search box" width="0"/>
+                <img src="7b858e261c7cf7d184b1f7b8d72e828d219c93804501d6f79ff7e65793d32d11.png" title=" Johan enters 'iPad pro',ENTER into the search box (completed)" width="0"/>
+                <img src="97b8d9d10388dab3055440f3a0e1ebd78d958e8c8cc3d4de7a56247d57a40a7d.png" title=" Johan search item (completed)" width="0"/>
+                <img src="97b8d9d10388dab3055440f3a0e1ebd78d958e8c8cc3d4de7a56247d57a40a7d.png" title=" Johan add item to cart" width="0"/>
+                <img src="97b8d9d10388dab3055440f3a0e1ebd78d958e8c8cc3d4de7a56247d57a40a7d.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="66b1f2d4b2bbb19de53e27a076d96fb2847fb5379b7c92337b29d0ec8ed6f05c.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (de121bc522e2cb4b7d5fc9a31378d6ee)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="dd3903563f0530962425f90eb700ffff72be95d4208afdf97e677c907b66079a.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="b610ad441ba36162c5145cea43f681f691ea544a4c2912817778e2220e7329a2.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="b610ad441ba36162c5145cea43f681f691ea544a4c2912817778e2220e7329a2.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="b610ad441ba36162c5145cea43f681f691ea544a4c2912817778e2220e7329a2.png" title=" When adds the following items to the cart
+| Iphone 15 pro max |
+| Apple Watch |
+| iPad pro | (completed)" width="0"/>
+                <img src="b610ad441ba36162c5145cea43f681f691ea544a4c2912817778e2220e7329a2.png" title=" And goes to the cart" width="0"/>
+                <img src="b610ad441ba36162c5145cea43f681f691ea544a4c2912817778e2220e7329a2.png" title=" Johan open cart" width="0"/>
+                <img src="6bc6e47259281214d75648298b1896c6e29011dc2a6800ea16a47b42d630b921.png" title=" Johan clicks on the cart link button" width="0"/>
+                <img src="8b5e8b9448a199e9af2a5939acdbfbca12b7160d41a54092aac6c4bcb3ebb642.png" title=" Johan clicks on the cart link button (completed)" width="0"/>
+                <img src="caff57eb4504c29f712a785e52df0ea13f7085f21542888c02d67b75ad609282.png" title=" Johan clicks on the go to the cart button" width="0"/>
+                <img src="6495bcc321e5b9843cacb3bbd271d83bd3d58e52a906034a396e1a414a774238.png" title=" Johan clicks on the go to the cart button (completed)" width="0"/>
+                <img src="50e7812fdee7bd662ad0fe729453aad442023e5d5eea5fb42fdf71cced9b2efe.png" title=" Johan open cart (completed)" width="0"/>
+                <img src="50e7812fdee7bd662ad0fe729453aad442023e5d5eea5fb42fdf71cced9b2efe.png" title=" Johan confirm cart" width="0"/>
+                <img src="50e7812fdee7bd662ad0fe729453aad442023e5d5eea5fb42fdf71cced9b2efe.png" title=" Johan clicks on the confirm purchase button" width="0"/>
+                <img src="b5c4d90fea011c4beba170489a7330b8dfed509f92746dc159a368fcd8eacded.png" title=" Johan clicks on the confirm purchase button (completed)" width="0"/>
+                <img src="b5c4d90fea011c4beba170489a7330b8dfed509f92746dc159a368fcd8eacded.png" title=" Johan confirm cart (completed)" width="0"/>
+                <img src="b5c4d90fea011c4beba170489a7330b8dfed509f92746dc159a368fcd8eacded.png" title=" And goes to the cart (completed)" width="0"/>
+                <img src="b5c4d90fea011c4beba170489a7330b8dfed509f92746dc159a368fcd8eacded.png" title=" And confirms their credentials using efecty payment method" width="0"/>
+                <img src="65c658cb49d513bba1d7e2119b165d502e43839ba356629e43292fd759d6a90e.png" title=" Johan fill out form" width="0"/>
+                <img src="65c658cb49d513bba1d7e2119b165d502e43839ba356629e43292fd759d6a90e.png" title=" Johan enters 'otha.schumm@gmail.com' into the email field" width="0"/>
+                <img src="41de08db5bdb10e251049b8cc425774791470cfde9044f9b07e68e0247a6c18c.png" title=" Johan enters 'otha.schumm@gmail.com' into the email field (completed)" width="0"/>
+                <img src="41de08db5bdb10e251049b8cc425774791470cfde9044f9b07e68e0247a6c18c.png" title=" Johan selects #value in the id box" width="0"/>
+                <img src="55ae234c0e2f2523b1a8d303ec2182886f6f5d7eb828840dd043e9faa6772c28.png" title=" Johan selects #value in the id box (completed)" width="0"/>
+                <img src="55ae234c0e2f2523b1a8d303ec2182886f6f5d7eb828840dd043e9faa6772c28.png" title=" Johan enters '12875282929' into the id field" width="0"/>
+                <img src="2a3dd2cfed366ecae459b9ef8e2cb17393aa8784d11d51ae95938e7fb0e9ba20.png" title=" Johan enters '12875282929' into the id field (completed)" width="0"/>
+                <img src="2a3dd2cfed366ecae459b9ef8e2cb17393aa8784d11d51ae95938e7fb0e9ba20.png" title=" Johan enters 'Sheryl' into the name field" width="0"/>
+                <img src="d188d32f916306ce40e69b256e250d69f950e6e9dcfd0e8df079085b09091998.png" title=" Johan enters 'Sheryl' into the name field (completed)" width="0"/>
+                <img src="d188d32f916306ce40e69b256e250d69f950e6e9dcfd0e8df079085b09091998.png" title=" Johan enters 'Ryan' into the lastname field" width="0"/>
+                <img src="8a69d51fe36b4eed952a873aa4a306d4291d1abd474e8f2db483cee2426eb909.png" title=" Johan enters 'Ryan' into the lastname field (completed)" width="0"/>
+                <img src="8a69d51fe36b4eed952a873aa4a306d4291d1abd474e8f2db483cee2426eb909.png" title=" Johan enters '9256 Gaston Flat, North Shenika, NM 02717' into the address field" width="0"/>
+                <img src="376e4dd32182556ca6401ad4c25a773c6d10bb2375396a58942740932113ede6.png" title=" Johan enters '9256 Gaston Flat, North Shenika, NM 02717' into the address field (completed)" width="0"/>
+                <img src="376e4dd32182556ca6401ad4c25a773c6d10bb2375396a58942740932113ede6.png" title=" Johan selects #value in the department box" width="0"/>
+                <img src="f4db7e9be68d4486f0e8a16d3c35f2062664a0b9cd877ff40f5108650e74e2fd.png" title=" Johan selects #value in the department box (completed)" width="0"/>
+                <img src="f4db7e9be68d4486f0e8a16d3c35f2062664a0b9cd877ff40f5108650e74e2fd.png" title=" Johan selects #value in the city box" width="0"/>
+                <img src="b801c7c31e5df17edf652807e20cfb90f1533da9cbe7475921ddfe02ead627da.png" title=" Johan selects #value in the city box (completed)" width="0"/>
+                <img src="b801c7c31e5df17edf652807e20cfb90f1533da9cbe7475921ddfe02ead627da.png" title=" Johan enters '3199343652' into the phone field" width="0"/>
+                <img src="c4e5ab5ac6f22cbbfa10c1bb161c9cc1d86dc454fd76c71d8be2fa3f2a044561.png" title=" Johan enters '3199343652' into the phone field (completed)" width="0"/>
+                <img src="c4e5ab5ac6f22cbbfa10c1bb161c9cc1d86dc454fd76c71d8be2fa3f2a044561.png" title=" Johan fill out form (completed)" width="0"/>
+                <img src="c4e5ab5ac6f22cbbfa10c1bb161c9cc1d86dc454fd76c71d8be2fa3f2a044561.png" title=" Johan continue to payment" width="0"/>
+                <img src="7565f8ee1947c34c9feeceaa7c1e4b9cea18cf6b51cf1429a5301a6768ff31f8.png" title=" Johan clicks on the continue button" width="0"/>
+                <img src="bb332b10e0ebb4f75cd6bf4e0b70c8ca4be86c040240efb4314859e704bb801b.png" title=" Johan clicks on the continue button (completed)" width="0"/>
+                <img src="47bcf186d479a643a3e10a24ff0b08d0f8cde15ad98ac42e0496807233e09f0c.png" title=" Johan clicks on continue payment button" width="0"/>
+                <img src="e07428ecb23663dd80dde7f03388a6250362b119c7f34ae95f51d6188436eb42.png" title=" Johan clicks on continue payment button (completed)" width="0"/>
+                <img src="e07428ecb23663dd80dde7f03388a6250362b119c7f34ae95f51d6188436eb42.png" title=" Johan continue to payment (completed)" width="0"/>
+                <img src="f96b077967867300c8bf8e8125ad08a84c603a037ba56227ddd9341e56bb2755.png" title=" Johan select efecty option" width="0"/>
+                <img src="f96b077967867300c8bf8e8125ad08a84c603a037ba56227ddd9341e56bb2755.png" title=" Johan clicks on continue efecty payment option" width="0"/>
+                <img src="ea5917e23e1d0a3b6950daa0f3ef733682ad68473dc8c165cca6834a40c67605.png" title=" Johan clicks on continue efecty payment option (completed)" width="0"/>
+                <img src="1cd1438fa245942296aa5ae879348e861d5498e6aa5b76190dbad537bf817293.png" title=" Johan select efecty option (completed)" width="0"/>
+                <img src="1cd1438fa245942296aa5ae879348e861d5498e6aa5b76190dbad537bf817293.png" title=" Johan fill out efecty form" width="0"/>
+                <img src="1cd1438fa245942296aa5ae879348e861d5498e6aa5b76190dbad537bf817293.png" title=" Johan selects #value in the efecty payment box" width="0"/>
+                <img src="6ac82e7addcf6de5cae0988954ff5a188c62a4192ce3306f64cb368f006149fc.png" title=" Johan selects #value in the efecty payment box (completed)" width="0"/>
+                <img src="6ac82e7addcf6de5cae0988954ff5a188c62a4192ce3306f64cb368f006149fc.png" title=" Johan selects #value in the efecty document box" width="0"/>
+                <img src="cce885cfa48a43e04bbaa7b4df2a898387c4a52ef72ecc63c9db9793396c62ab.png" title=" Johan selects #value in the efecty document box (completed)" width="0"/>
+                <img src="cce885cfa48a43e04bbaa7b4df2a898387c4a52ef72ecc63c9db9793396c62ab.png" title=" Johan enters '12875282929' into the document input" width="0"/>
+                <img src="d738ec7d12785d3627c089dec9030fddaf7526cd0a311f6bfaca202e0d375fd9.png" title=" Johan enters '12875282929' into the document input (completed)" width="0"/>
+                <img src="d738ec7d12785d3627c089dec9030fddaf7526cd0a311f6bfaca202e0d375fd9.png" title=" Johan clicks on the terms and conditions check box" width="0"/>
+                <img src="8cff9ca19039e4db4d6d6ea6097a1ad5ef7812dd78b783d125a3514c13d63acc.png" title=" Johan clicks on the terms and conditions check box (completed)" width="0"/>
+                <img src="8cff9ca19039e4db4d6d6ea6097a1ad5ef7812dd78b783d125a3514c13d63acc.png" title=" Johan fill out efecty form (completed)" width="0"/>
+                <img src="8cff9ca19039e4db4d6d6ea6097a1ad5ef7812dd78b783d125a3514c13d63acc.png" title=" And confirms their credentials using efecty payment method (completed)" width="0"/>
+                <img src="8cff9ca19039e4db4d6d6ea6097a1ad5ef7812dd78b783d125a3514c13d63acc.png" title=" Then should be able to confirm the payment" width="0"/>
+                <img src="38ea1155c2907cf9f6226a6915fa69d3e01c21b05e40ed68ce17b87c1edff8ea.png" title=" Then pay button enabled should be (true)" width="0"/>
+                <img src="38ea1155c2907cf9f6226a6915fa69d3e01c21b05e40ed68ce17b87c1edff8ea.png" title=" Then should be able to confirm the payment (completed)" width="0"/>
+                <img src="38ea1155c2907cf9f6226a6915fa69d3e01c21b05e40ed68ce17b87c1edff8ea.png" title=" 1: Successfully purchase items using Efecty ({webBrowser=chrome}) (completed)" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" 2: Successfully purchase items using Efecty ({webBrowser=edge})" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Given the user is on the mac-center.com platform using &quot;edge&quot;" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Johan open main" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Johan opens the browser at https://mac-center.com/" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" Johan opens the browser at https://mac-center.com/ (completed)" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" Johan open main (completed)" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" Given the user is on the mac-center.com platform using &quot;edge&quot; (completed)" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" When adds the following items to the cart
+| Iphone 15 pro max |
+| Apple Watch |
+| iPad pro |" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" Johan search item" width="0"/>
+                <img src="7014a55cc6ffdff938eac100f95b7f6c4a3f97b0766b9bd4eb69bc7989dbeea6.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="6e1645c230524c992eda0ab27bb447a4653fdf51df2abc8653cfbf52bae0e43c.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="6e1645c230524c992eda0ab27bb447a4653fdf51df2abc8653cfbf52bae0e43c.png" title=" Johan enters 'Iphone 15 pro max',ENTER into the search box" width="0"/>
+                <img src="2e8d0d9fc830eba385f9b41c04e8aeb4340a2668c3dc16154e50cb5cfdf58d2c.png" title=" Johan enters 'Iphone 15 pro max',ENTER into the search box (completed)" width="0"/>
+                <img src="7909740f0c808ae84294a0c3f6ff0bf44663384499e955954c2c998df6246bc1.png" title=" Johan search item (completed)" width="0"/>
+                <img src="7909740f0c808ae84294a0c3f6ff0bf44663384499e955954c2c998df6246bc1.png" title=" Johan add item to cart" width="0"/>
+                <img src="868a282b160ba8a32892479c9a81c40e31504eed39276c98dbfeaf752caa5a49.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="8d6e2baf7af5efc9b7607d48b796a8277e074fc84ebb8882ec3a7cecc508062c.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="cac6a8e96eb342edf778a144a4542f5ed2d712a492d41f907b6b4ee6ce800ac3.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="6ab3a2a10a733eddd7a9b5c8597e0330cf14cdbf1d3fecb4d99480aceda26a07.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="6ab3a2a10a733eddd7a9b5c8597e0330cf14cdbf1d3fecb4d99480aceda26a07.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="6ab3a2a10a733eddd7a9b5c8597e0330cf14cdbf1d3fecb4d99480aceda26a07.png" title=" Johan search item" width="0"/>
+                <img src="6ab3a2a10a733eddd7a9b5c8597e0330cf14cdbf1d3fecb4d99480aceda26a07.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="69b335670f4f93d36b540a0e071bcba3f2c79d2cd2a5203a420f2bfb0a51acbc.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="69b335670f4f93d36b540a0e071bcba3f2c79d2cd2a5203a420f2bfb0a51acbc.png" title=" Johan enters 'Apple Watch',ENTER into the search box" width="0"/>
+                <img src="0e65c3b72b17f4f935814eccb1f122eb8b570bf015df5ac84e586b8f8c791fed.png" title=" Johan enters 'Apple Watch',ENTER into the search box (completed)" width="0"/>
+                <img src="b54181336611d954130706c29303db8cd80e00dcb92baa72db8ffa54a022037e.png" title=" Johan search item (completed)" width="0"/>
+                <img src="b54181336611d954130706c29303db8cd80e00dcb92baa72db8ffa54a022037e.png" title=" Johan add item to cart" width="0"/>
+                <img src="b54181336611d954130706c29303db8cd80e00dcb92baa72db8ffa54a022037e.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="ef8308c7f192e3f47a6e1715010a27743f0f1cbca48d4edcbfe602ea6a14216a.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="6ff94a7af5e348f5ff736c804c1bc489106d9e3eea1240d87df14c1f8b1e9548.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="410d18bfbe6fb0e51277c9bca7bc2b1baf7e11f5c433880b1f4350dc9174cb84.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="410d18bfbe6fb0e51277c9bca7bc2b1baf7e11f5c433880b1f4350dc9174cb84.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="410d18bfbe6fb0e51277c9bca7bc2b1baf7e11f5c433880b1f4350dc9174cb84.png" title=" Johan search item" width="0"/>
+                <img src="410d18bfbe6fb0e51277c9bca7bc2b1baf7e11f5c433880b1f4350dc9174cb84.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="f58e0678052478c3e608db2f071298959db2228cb893726fdc34afc0060383f4.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="f58e0678052478c3e608db2f071298959db2228cb893726fdc34afc0060383f4.png" title=" Johan enters 'iPad pro',ENTER into the search box" width="0"/>
+                <img src="97bbff17b847e741ae213ff48a236fea10c6ced47da904de82e530db962502ad.png" title=" Johan enters 'iPad pro',ENTER into the search box (completed)" width="0"/>
+                <img src="1a39a61f4c74e632f88f3033edd066f35f9fb15f21a82e24a0fe1c503c625b89.png" title=" Johan search item (completed)" width="0"/>
+                <img src="1a39a61f4c74e632f88f3033edd066f35f9fb15f21a82e24a0fe1c503c625b89.png" title=" Johan add item to cart" width="0"/>
+                <img src="1a39a61f4c74e632f88f3033edd066f35f9fb15f21a82e24a0fe1c503c625b89.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="549628a099892c6309452b250e4f98274786c656a9b45c1637c1c2cef3dd43bb.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (38f88b48df9141b1434482215f9385b6)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="5b55d73436990d3dcfca9978eaa397d314bbe5c92a47fd40305e1ea2ab5b426c.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" When adds the following items to the cart
+| Iphone 15 pro max |
+| Apple Watch |
+| iPad pro | (completed)" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" And goes to the cart" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" Johan open cart" width="0"/>
+                <img src="39a3a51dd1cc58a03c4103a8d8a6ca7a314cb36fe31233f7cdccac7ba8009ba1.png" title=" Johan clicks on the cart link button" width="0"/>
+                <img src="1beb6d36c8fad4eb95498ae038ded1b5813fe926696a02659b0bc9d88182c3d7.png" title=" Johan clicks on the cart link button (completed)" width="0"/>
+                <img src="11c5c210974c071be372008ed33b64bed815a7eac619ad1e433d76ee74dd641e.png" title=" Johan clicks on the go to the cart button" width="0"/>
+                <img src="ded23bf5fe4713b4550b957fe01882842519baca3347245a3afaad399e50a22f.png" title=" Johan clicks on the go to the cart button (completed)" width="0"/>
+                <img src="dfb740941d1fd81c762e7cce6c4140f3eb614924a4239ac9a0e5dabe24df0ed7.png" title=" Johan open cart (completed)" width="0"/>
+                <img src="dfb740941d1fd81c762e7cce6c4140f3eb614924a4239ac9a0e5dabe24df0ed7.png" title=" Johan confirm cart" width="0"/>
+                <img src="dfb740941d1fd81c762e7cce6c4140f3eb614924a4239ac9a0e5dabe24df0ed7.png" title=" Johan clicks on the confirm purchase button" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" Johan clicks on the confirm purchase button (completed)" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" Johan confirm cart (completed)" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" And goes to the cart (completed)" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" And confirms their credentials using efecty payment method" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" Johan fill out form" width="0"/>
+                <img src="a1bdaed990e23e00be35da71778cf223c826d5ed690f9d5e8cc2cc9b56fca79a.png" title=" Johan enters 'francisco.boyer@yahoo.com' into the email field" width="0"/>
+                <img src="6fc75875f373a53d07847c80ca45aea1fa8cd9d32ddf48becdd878126f1cac18.png" title=" Johan enters 'francisco.boyer@yahoo.com' into the email field (completed)" width="0"/>
+                <img src="6fc75875f373a53d07847c80ca45aea1fa8cd9d32ddf48becdd878126f1cac18.png" title=" Johan selects #value in the id box" width="0"/>
+                <img src="2cc0f9f0ab6786642b89dbdb89d962b7d946dc806fa99eeb96be993c3b45d00b.png" title=" Johan selects #value in the id box (completed)" width="0"/>
+                <img src="2cc0f9f0ab6786642b89dbdb89d962b7d946dc806fa99eeb96be993c3b45d00b.png" title=" Johan enters '10475784587' into the id field" width="0"/>
+                <img src="26df134ae982115e03a6c1c86590ae0b054f81cc199d95568a2423ad53494f86.png" title=" Johan enters '10475784587' into the id field (completed)" width="0"/>
+                <img src="26df134ae982115e03a6c1c86590ae0b054f81cc199d95568a2423ad53494f86.png" title=" Johan enters 'Shawnta' into the name field" width="0"/>
+                <img src="12d1508dba3063644eb38928b4d276eabaa935b71b60b616b6570dc93caa43d1.png" title=" Johan enters 'Shawnta' into the name field (completed)" width="0"/>
+                <img src="12d1508dba3063644eb38928b4d276eabaa935b71b60b616b6570dc93caa43d1.png" title=" Johan enters 'Gorczany' into the lastname field" width="0"/>
+                <img src="91344cfeff20092bbcc6b331a92b81f466e7cca7fa54080a97a83293a9ddd6ca.png" title=" Johan enters 'Gorczany' into the lastname field (completed)" width="0"/>
+                <img src="91344cfeff20092bbcc6b331a92b81f466e7cca7fa54080a97a83293a9ddd6ca.png" title=" Johan enters 'Apt. 918 966 Bernier Burg, South Curtmouth, AZ 64633' into the address field" width="0"/>
+                <img src="9cf8b381a15847cc4f5594f0dd8f709e2a3dee632bdf8f7596d83b8d7b5b6baa.png" title=" Johan enters 'Apt. 918 966 Bernier Burg, South Curtmouth, AZ 64633' into the address field (completed)" width="0"/>
+                <img src="9cf8b381a15847cc4f5594f0dd8f709e2a3dee632bdf8f7596d83b8d7b5b6baa.png" title=" Johan selects #value in the department box" width="0"/>
+                <img src="696bdf3215e60517bf0b5c50b4022fee74684275be03e3c71da4ef64bbefe985.png" title=" Johan selects #value in the department box (completed)" width="0"/>
+                <img src="696bdf3215e60517bf0b5c50b4022fee74684275be03e3c71da4ef64bbefe985.png" title=" Johan selects #value in the city box" width="0"/>
+                <img src="fef3e9f3612c0e78c4797dc52e3bca6d3e70e6320524bd3780c9c5e79e4cfc36.png" title=" Johan selects #value in the city box (completed)" width="0"/>
+                <img src="fef3e9f3612c0e78c4797dc52e3bca6d3e70e6320524bd3780c9c5e79e4cfc36.png" title=" Johan enters '3129488591' into the phone field" width="0"/>
+                <img src="aaf19d35151659b48b45f3a236e57cb25c5ce6b92ac5af6e2251ea9ad7bed85d.png" title=" Johan enters '3129488591' into the phone field (completed)" width="0"/>
+                <img src="aaf19d35151659b48b45f3a236e57cb25c5ce6b92ac5af6e2251ea9ad7bed85d.png" title=" Johan fill out form (completed)" width="0"/>
+                <img src="aaf19d35151659b48b45f3a236e57cb25c5ce6b92ac5af6e2251ea9ad7bed85d.png" title=" Johan continue to payment" width="0"/>
+                <img src="aaf19d35151659b48b45f3a236e57cb25c5ce6b92ac5af6e2251ea9ad7bed85d.png" title=" Johan clicks on the continue button" width="0"/>
+                <img src="696a05ade934600f58ef41ebe8813f8b543dbe17596f9f728d3a7db63014da67.png" title=" Johan clicks on the continue button (completed)" width="0"/>
+                <img src="c34fe0cca3ca91be3ff050c38de75369c0f6ea4e4d69ef2b3931538388c9d8be.png" title=" Johan clicks on continue payment button" width="0"/>
+                <img src="8e0bed1b81b6ad229c2d35fd3dd53f737fa522f31c43aaf39f279e66ff4a2598.png" title=" Johan clicks on continue payment button (completed)" width="0"/>
+                <img src="36f8f942ad5546d46076ac2317fed304029721e9c0e6a3cadbb98f80e9686d64.png" title=" Johan continue to payment (completed)" width="0"/>
+                <img src="36f8f942ad5546d46076ac2317fed304029721e9c0e6a3cadbb98f80e9686d64.png" title=" Johan select efecty option" width="0"/>
+                <img src="36f8f942ad5546d46076ac2317fed304029721e9c0e6a3cadbb98f80e9686d64.png" title=" Johan clicks on continue efecty payment option" width="0"/>
+                <img src="f96b91a673106bd97ed8022937ffe5660363586f63c268748151489261ef7088.png" title=" Johan clicks on continue efecty payment option (completed)" width="0"/>
+                <img src="1fe6afaae23338cb4652e39da46eeda66a5ffbd29a7ba25de88874f776401af9.png" title=" Johan select efecty option (completed)" width="0"/>
+                <img src="1fe6afaae23338cb4652e39da46eeda66a5ffbd29a7ba25de88874f776401af9.png" title=" Johan fill out efecty form" width="0"/>
+                <img src="1fe6afaae23338cb4652e39da46eeda66a5ffbd29a7ba25de88874f776401af9.png" title=" Johan selects #value in the efecty payment box" width="0"/>
+                <img src="80ace81bf24f36e6663193eeec4dc92f2b9b014c65166d4c66feb48c7b059a87.png" title=" Johan selects #value in the efecty payment box (completed)" width="0"/>
+                <img src="80ace81bf24f36e6663193eeec4dc92f2b9b014c65166d4c66feb48c7b059a87.png" title=" Johan selects #value in the efecty document box" width="0"/>
+                <img src="e2f3f0a1563c2824af943461689634a8aca3640c58506d39756b9199da4c4066.png" title=" Johan selects #value in the efecty document box (completed)" width="0"/>
+                <img src="e2f3f0a1563c2824af943461689634a8aca3640c58506d39756b9199da4c4066.png" title=" Johan enters '10475784587' into the document input" width="0"/>
+                <img src="cd6e91aba5efd5cabc87bf2ad06c2f7bf4266f926faf9efa4f3ce2a4f2b50a4f.png" title=" Johan enters '10475784587' into the document input (completed)" width="0"/>
+                <img src="cd6e91aba5efd5cabc87bf2ad06c2f7bf4266f926faf9efa4f3ce2a4f2b50a4f.png" title=" Johan clicks on the terms and conditions check box" width="0"/>
+                <img src="29e2420016490b4069175e47b5fe73e565b878ece33dba9be03dd83c720dde20.png" title=" Johan clicks on the terms and conditions check box (completed)" width="0"/>
+                <img src="29e2420016490b4069175e47b5fe73e565b878ece33dba9be03dd83c720dde20.png" title=" Johan fill out efecty form (completed)" width="0"/>
+                <img src="29e2420016490b4069175e47b5fe73e565b878ece33dba9be03dd83c720dde20.png" title=" And confirms their credentials using efecty payment method (completed)" width="0"/>
+                <img src="1640167745f854cb9bec07e417b2dfc26092c9c6263f88d1e52c7b4bdfc8fb0d.png" title=" Then should be able to confirm the payment" width="0"/>
+                <img src="1640167745f854cb9bec07e417b2dfc26092c9c6263f88d1e52c7b4bdfc8fb0d.png" title=" Then pay button enabled should be (true)" width="0"/>
+
+                <img src="1640167745f854cb9bec07e417b2dfc26092c9c6263f88d1e52c7b4bdfc8fb0d.png" title=" 2: Successfully purchase items using Efecty ({webBrowser=edge}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
