@@ -6,20 +6,20 @@ import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Data {
-    private List<Hero> results;
+    private List<Character> results;
 
     public Data() {
     }
 
-    public Data(List<Hero> results) {
+    public Data(List<Character> results) {
         this.results = results;
     }
 
-    public List<Hero> getResults() {
+    public List<Character> getResults() {
         return results;
     }
 
-    public void setResults(List<Hero> results) {
+    public void setResults(List<Character> results) {
         this.results = results;
     }
 }
