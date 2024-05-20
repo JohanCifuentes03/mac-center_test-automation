@@ -52,9 +52,9 @@ public class FillOutBBVAForm implements Task {
                 Scroll.to(PaymentPage.TERMS_CONDITIONS_CHECK_BOX),
                 Click.on(PaymentPage.TERMS_CONDITIONS_CHECK_BOX),
                 Wait.until(WebElementQuestion.the(PaymentPage.PAY_BUTTON),
-                        WebElementStateMatchers.isEnabled()).forNoMoreThan(Duration.ofSeconds(5))
+                        WebElementStateMatchers.isEnabled()).forNoMoreThan(Duration.ofSeconds(5)),
+                Scroll.to(PaymentPage.CARD_DIGITS)
         );
-
 
     }
 
