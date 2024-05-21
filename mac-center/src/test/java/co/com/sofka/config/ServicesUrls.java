@@ -16,6 +16,12 @@ public class ServicesUrls {
     //  Soap service URL
     public static String SOAP_BASE_URL = "http://www.dneonline.com/";
     public static String SOAP_RESOURCE = "calculator.asmx";
+
     public static String SOAP_ADD_URL = "http://tempuri.org/Add";
+    public static String SOAP_DIVIDE_URL = "http://tempuri.org/Divide";
+    public static String SOAP_MULTIPLY_URL = "http://tempuri.org/Multiply";
+    public static String SOAP_SUBTRACT_URL = "http://tempuri.org/Subtract";
+
+
 
 }
