@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e849820-7e6c-4162-af57-f53f75d0a4cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/interactions/OurPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/ResponseSoap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/AddNumberSoapSD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/calculator.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/xml/add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/questions/ResponseDynamicResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/utils/XmlBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/AddSoapServiceSD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/DivideSoapServiceSD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/MultiplySoapServiceSD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/SubtractSoapServiceSD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/xml/divide.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/xml/multiply.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/xml/subtract.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/tasks/service/DoGet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/sofka/ui/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServiceUrls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServicesUrls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetAllHeroesSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetAllHeroesSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetSingleComicSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/GetSingleComicSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/ServiceSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/ServiceSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServicesUrls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/sofka/config/ServicesUrls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinitions/service/AddNumberSoapSD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/calculator.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/calculator.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-58ea68fe900ac48947513d080012fb20f2233f6045025e9291822c3f7000bd03.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-e946e9bca5b059d4de59ac705383968bb0b8c57d0da26a875ed68a1749726923.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-e946e9bca5b059d4de59ac705383968bb0b8c57d0da26a875ed68a1749726923.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/dd63ce642b9ad2eb305bf4a07d6721e21b99a0016986c4a9e39d7357d4a912f4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/serenity/e946e9bca5b059d4de59ac705383968bb0b8c57d0da26a875ed68a1749726923.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/serenity/e946e9bca5b059d4de59ac705383968bb0b8c57d0da26a875ed68a1749726923.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,34 +109,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Cucumber Java.Scenario: Successfully purchase items.executor": "Run",
-    "Gradle.mac-center [aggregate].executor": "Run",
-    "Gradle.mac-center [checkOutcomes].executor": "Run",
-    "Gradle.mac-center [clearHistory].executor": "Run",
-    "Gradle.mac-center [clearReports].executor": "Run",
-    "Gradle.mac-center [history].executor": "Run",
-    "Gradle.mac-center [reports].executor": "Run",
-    "JUnit.ApiTest.executor": "Run",
-    "JUnit.BuyItemsTest.executor": "Run",
-    "JUnit.GeneralTest.executor": "Run",
-    "JUnit.RunnerCarrito.executor": "Run",
-    "JUnit.WebTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "johan.cifuentes",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Johan Cifuentes/Desktop/JAVA/DemoScreenplay/build.gradle",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Successfully purchase items.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [aggregate].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [checkOutcomes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [clearHistory].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [clearReports].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [history].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mac-center [reports].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BuyItemsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GeneralTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunnerCarrito.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WebTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;johan.cifuentes&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Johan Cifuentes/Desktop/JAVA/DemoScreenplay/build.gradle&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Johan Cifuentes\Desktop\JAVA\mac-center_test-automation\mac-center\target\site\serenity" />
